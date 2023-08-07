@@ -1,0 +1,77 @@
+.pc_header {
+    visibility: visible;
+}
+
+.sp_header {
+    visibility: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.pc {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin-left: 1em;
+
+        a {
+            text-decoration: none;
+            color: magenta;
+        }
+    }
+}
+
+.menu {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    margin: 10px;
+    padding: 10px; 
+}
+
+.urls {
+    color: gray;
+    display: flex;
+    margin: auto;
+}
+
+.sp {
+    list-style: none;
+
+    li {
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+    }
+}
+
+.ham {
+    // width: 30px;
+    margin: 15px;
+    font-size: 2em;
+}
+
+.icon {
+    font-size: 2em;
+    margin: 10px;
+    color: gray;
+}
+
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    .pc_header {
+        visibility: hidden;
+    }
+
+    .sp_header {
+        visibility: visible;
+    }
+}
