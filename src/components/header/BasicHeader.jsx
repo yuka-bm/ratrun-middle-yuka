@@ -19,16 +19,16 @@ const BasicHeader = () => {
   ];
 
   // ハンバーガーメニューのオープン状態
-  const [open, setStatus] = useState(false);
-  const [ham, setIcon] = useState(faBars);
+  const [openFlag, setOpenFlag] = useState(false);
+  const [menuIcon, setMenuIcon] = useState(faBars);
 
   // レスポンシブ：画面サイズ確認
-  const TABLET_WIDTH = 959;
+  const TABLET_WIDTH = 768;
 
   const checkDesktopSize = () => {
-    if (window.innerWidth > TABLET_WIDTH && open) {
-      setStatus(false);
-      setIcon(faBars);
+    if (window.innerWidth > TABLET_WIDTH && openFlag) {
+      setOpenFlag(false);
+      setMenuIcon(faBars);
     }
   };
 
@@ -37,48 +37,47 @@ const BasicHeader = () => {
   // ハンバーガーメニューの状態切り替え
   const toggleMenu = () => {
     // ハンバーガーメニューのアイコントグル
-    setIcon(open ? faBars : faXmark);
+    setMenuIcon(openFlag ? faBars : faXmark);
     // 開閉状態の反転
-    setStatus(!open);
+    setOpenFlag(!openFlag);
   };
 
   return (
     <header>
-      <div className="wrapper">
-        <nav className="pc_header">
-          <ul className="pc">
-            {headerList.map((list, index) => (
-              <li key={index}>
-                <a href={list.to}>{list.title}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className="sp_header">
-          <FontAwesomeIcon className="ham" icon={ham} onClick={toggleMenu} />
-          {/* <FontAwesomeIcon class="ham" icon={{open} ? {faBars} : {faXmark}} onClick={toggleMenu}/> */}
-        </div>
-      </div>
-      <nav className="menu" style={{ visibility: open ? "visible" : "hidden" }}>
-        <ul className="sp">
+      <nav className="pc_header">
+        <ul className="pc">
           {headerList.map((list, index) => (
             <li key={index}>
               <a href={list.to}>{list.title}</a>
             </li>
           ))}
         </ul>
-        <div className="urls">
-          <a href="#a" className="icon">
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a href="#b" className="icon">
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="#c" className="icon">
-            <FontAwesomeIcon icon={faPinterest} />
-          </a>
-        </div>
       </nav>
+      <div className="sp_header">
+        <div>
+          <FontAwesomeIcon className="menu_icon" icon={menuIcon} onClick={toggleMenu} />
+        </div>
+        <nav className="menu" style={{ display: openFlag ? "flex" : "none" }}>
+          <ul className="sp">
+            {headerList.map((list, index) => (
+              <li key={index}>
+                <a href={list.to}>{list.title}</a>
+              </li>
+            ))}
+          </ul>
+          <div className="urls">
+            <a href="#a" className="link_icon">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="#b" className="link_icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="#c" className="link_icon">
+              <FontAwesomeIcon icon={faPinterest} />
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 };

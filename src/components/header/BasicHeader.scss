@@ -1,15 +1,19 @@
+@import "../../mixin";
+
 .pc_header {
-    visibility: visible;
+    position: absolute;
+    z-index: 10;
+    @include mobile {
+        display: none;
+    }
 }
 
 .sp_header {
-    visibility: hidden;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .pc {
@@ -27,12 +31,11 @@
 }
 
 .menu {
-    visibility: hidden;
+    border: 2px solid gray;
     display: flex;
     flex-direction: column;
-    border: 2px solid gray;
-    margin: 10px;
-    padding: 10px; 
+    margin: 5%;
+    padding: 10px;
 }
 
 .urls {
@@ -52,26 +55,14 @@
     }
 }
 
-.ham {
-    // width: 30px;
+.menu_icon {
     margin: 15px;
     font-size: 2em;
+    float: right;
 }
 
-.icon {
+.link_icon {
     font-size: 2em;
     margin: 10px;
     color: gray;
-}
-
-
-@media screen and (max-width: 959px) {
-	/* 959px以下に適用されるCSS（タブレット用） */
-    .pc_header {
-        visibility: hidden;
-    }
-
-    .sp_header {
-        visibility: visible;
-    }
 }

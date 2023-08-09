@@ -1,0 +1,6 @@
+$tb: 768px;
+@mixin mobile {
+    @media only screen and (max-width: ($tb)) {
+        @content;
+    }
+}
