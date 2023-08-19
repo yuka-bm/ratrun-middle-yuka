@@ -1,0 +1,68 @@
+@import "../../mixin";
+
+.pc_header {
+    position: absolute;
+    z-index: 10;
+    @include mobile {
+        display: none;
+    }
+}
+
+.sp_header {
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.pc {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin-left: 1em;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.menu {
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    padding: 10px;
+}
+
+.urls {
+    color: gray;
+    display: flex;
+    margin: auto;
+}
+
+.sp {
+    list-style: none;
+
+    li {
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+    }
+}
+
+.menu_icon {
+    margin: 15px;
+    font-size: 2em;
+    float: right;
+}
+
+.link_icon {
+    font-size: 2em;
+    margin: 10px;
+    color: gray;
+}
