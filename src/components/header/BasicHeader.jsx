@@ -22,18 +22,6 @@ const BasicHeader = () => {
   const [openFlag, setOpenFlag] = useState(false);
   const [menuIcon, setMenuIcon] = useState(faBars);
 
-  // レスポンシブ：画面サイズ確認
-  const TABLET_WIDTH = 768;
-
-  const checkDesktopSize = () => {
-    if (window.innerWidth > TABLET_WIDTH && openFlag) {
-      setOpenFlag(false);
-      setMenuIcon(faBars);
-    }
-  };
-
-  window.addEventListener("resize", checkDesktopSize);
-
   // ハンバーガーメニューの状態切り替え
   const toggleMenu = () => {
     // ハンバーガーメニューのアイコントグル
