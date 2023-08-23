@@ -1,0 +1,21 @@
+@import "../../../mixin";
+
+table, td, th {
+    border: 2px solid gray;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 2px 4px;
+
+    th {
+        background-color: lightgray;
+    }
+
+    @include mobile {
+        th, td {
+            display: block;
+            border: 1.5px solid gray;;
+        }
+    }
+}
+
+

@@ -12,10 +12,10 @@ const BasicHeader = () => {
   // ヘッダメニュー
   const headerList = [
     { title: "ホーム", to: "#" },
-    { title: "経営理念", to: "#" },
+    { title: "経営理念", to: "#philosophy" },
     { title: "事業理念", to: "#" },
-    { title: "事業目的", to: "#" },
-    { title: "お問い合わせ", to: "#" },
+    { title: "事業目的", to: "#vision" },
+    { title: "お問い合わせ", to: "#footer" },
   ];
 
   // ハンバーガーメニューのオープン状態

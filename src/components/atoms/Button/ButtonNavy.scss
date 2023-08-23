@@ -1,0 +1,17 @@
+button {
+    background-color: navy;
+    width: auto;
+    height: 50px;
+    padding: 0 25px;
+    border-radius:10px;
+    border: none;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+button:hover {
+    background-color: gray;
+}

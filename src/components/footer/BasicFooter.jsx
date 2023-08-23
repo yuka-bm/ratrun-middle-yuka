@@ -23,7 +23,7 @@ const BasicFooter = () => {
 
   return (
     <footer>
-      <div className="footer-top">
+      <div className="footer-top" id="footer">
         <div className="footer_left">
             <img src={logo} alt="logo" className="logo" />
             <p>Interior design<br />&<br />Construction</p>
