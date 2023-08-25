@@ -1,11 +1,11 @@
 import React from "react";
 import "./ButtonNavy.scss";
 
-const ButtonNavy = preps => {
+const ButtonNavy = ({ text, size, to }) => {
 
     return (
-        <button type="submit" style={{fontSize: `${preps.size}`}}>
-            <a href={`${preps.to}`}>{preps.text}</a>
+        <button type="submit" style={{fontSize: `${size}`}}>
+            <a href={`${to}`}>{text}</a>
         </button>
     );
 };
