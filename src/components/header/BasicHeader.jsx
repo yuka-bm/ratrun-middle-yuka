@@ -46,23 +46,25 @@ const BasicHeader = () => {
           <FontAwesomeIcon className="menu_icon" icon={menuIcon} onClick={toggleMenu} />
         </div>
         <nav className="menu" style={{ display: openFlag ? "flex" : "none" }}>
-          <ul className="sp">
-            {headerList.map((list, index) => (
-              <li key={index}>
-                <a href={list.to}>{list.title}</a>
-              </li>
-            ))}
-          </ul>
-          <div className="urls">
-            <a href="#a" className="link_icon">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a href="#b" className="link_icon">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="#c" className="link_icon">
-              <FontAwesomeIcon icon={faPinterest} />
-            </a>
+          <div className="menu_content">
+            <ul className="sp">
+              {headerList.map((list, index) => (
+                <li key={index}>
+                  <a href={list.to}>{list.title}</a>
+                </li>
+              ))}
+            </ul>
+            <div className="urls">
+              <a href="#a" className="link_icon">
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a href="#b" className="link_icon">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="#c" className="link_icon">
+                <FontAwesomeIcon icon={faPinterest} />
+              </a>
+            </div>
           </div>
         </nav>
       </div>

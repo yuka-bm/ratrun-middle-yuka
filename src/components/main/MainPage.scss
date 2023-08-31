@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-.contents {
+.content {
     margin: 2em 8%;
 }
 
@@ -155,4 +155,148 @@ h2 {
             object-fit: cover;
         }
     }
+}
+
+.mission {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1%;
+
+    @include mobile {
+        display: block;
+    }
+
+    .vision_content {
+        width: 24%;
+        text-align: center;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 3em;
+        }
+
+        .title {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: left;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        img { width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.technology {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: -2em;
+
+    @include mobile {
+        display: block;
+        margin-bottom: 3em;
+    }
+
+    .tech_content {
+        width: 32%;
+        text-align: center;
+        background-color: lightgray;
+        margin-bottom: 3em;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .title {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 1em;
+        }
+
+        p {
+            text-align: left;
+            padding: 1em;
+        }
+
+        img { width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.examples {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .example {
+        background-color: navy;
+        color: white;
+        font-size: 21px;
+        padding: 5px;
+        width: 110px;
+        text-align: center;
+    }
+}
+
+.office {
+    text-align: center;
+    img {
+        width: 80%;
+    }
+}
+
+.imgs {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    img { 
+        width: 30%;
+    }
+}
+
+.detail {
+    margin-top: 50px;
+    border: 2px solid lightgray;
+    padding: 15px;
+}
+
+.accordions {
+    
+    .accordion-head {
+        background-color: gray;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        padding: 10px;
+
+        p {
+            font-size: x-large;
+            color: white;
+        }
+    }
+
+    .accordion-body {
+        background-color: lightgray;
+        padding: 10px;
+    }
+
 }

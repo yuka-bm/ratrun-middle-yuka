@@ -4,7 +4,7 @@ import "./TablePhilosophy.scss";
 const TablePhilosophy = () => {
 
     return (
-        <table>
+        <table className="table_philosophy">
             <tbody>
                 <tr>
                     <th>竣工年：</th>
