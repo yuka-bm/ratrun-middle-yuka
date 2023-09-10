@@ -1,5 +1,5 @@
-import React from "react";
 import "./MainPage.scss";
+import React, { useState } from "react";
 import top from "../../assets/img/cyber-g15cd33eba_1920.png";
 import room from "../../assets/img/room.png";
 import phone from "../../assets/img/phone.png";
@@ -34,11 +34,21 @@ const MainPage = () => {
         { title: "⑤情報技術", img: phone, text: "昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。", to: "#" },
     ];
 
+    const [openIndex, setOpenIndex] = useState(-1);
     const accordionData = [
         { overview: "アコーディオン", detail: "昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。" },
         { overview: "アコーディオン", detail: "昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。" },
         { overview: "アコーディオン", detail: "昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。" },
     ];
+
+    const handleAccordion = (index) => {
+        if (index === openIndex) {
+            setOpenIndex(-1);
+        }
+        else {
+            setOpenIndex(index);
+        }
+    };
 
   return (
     <div className="main">
@@ -169,7 +179,14 @@ const MainPage = () => {
             <h3>制作時のポイント</h3>
             <hr />
             {accordionData.map((list, index) => (
-                <AccordionGray overview={list.overview} detail={list.detail} key={index} />
+                <AccordionGray 
+                    overview={list.overview} 
+                    detail={list.detail} 
+                    openIndex={openIndex} 
+                    handleAccordion={() => handleAccordion(index)} 
+                    accordionindex={index}
+                    key={index}
+                />
             ))}
        </div>
        <div className="content">
