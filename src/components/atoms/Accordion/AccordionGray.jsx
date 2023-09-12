@@ -7,10 +7,10 @@ const AccordionGray = ({ overview, detail, openIndex, handleAccordion, accordion
 
     return (
         <div className="accordion">
-            <div className="accordion-head" onClick={() => handleAccordion()}>
+            <button className="accordion-head" onClick={() => handleAccordion()}>
                 <p className="accordion-title">{overview}</p>
                 {accordionindex !== openIndex && <p className="accordion-button"><FontAwesomeIcon icon={faPlus} /></p>}
-            </div>
+            </button>
             {accordionindex === openIndex && <div className="accordion-body">{detail}</div> }
         </div>
     );

@@ -4,9 +4,7 @@ import top from "../../assets/img/cyber-g15cd33eba_1920.png";
 import room from "../../assets/img/room.png";
 import phone from "../../assets/img/phone.png";
 import calendar from "../../assets/img/calendar.png";
-import TablePhilosophy from '../atoms/Table/TablePhilosophy';
-import TableDesignOverview from '../atoms/Table/TableDesignOverview';
-import TableDesignAward from '../atoms/Table/TableDesignAward';
+import { TablePhilosophy,TableDesignOverview,TableDesignAward } from '../atoms/Table';
 import ButtonNavy from '../atoms/Button/ButtonNavy';
 import CircleNumber from '../atoms/Number/CircleNumber';
 import ThumbSlider from '../atoms/Slider/ThumbSlider';
@@ -42,12 +40,7 @@ const MainPage = () => {
     ];
 
     const handleAccordion = (index) => {
-        if (index === openIndex) {
-            setOpenIndex(-1);
-        }
-        else {
-            setOpenIndex(index);
-        }
+        setOpenIndex(index === openIndex ? -1 : index);
     };
 
   return (
