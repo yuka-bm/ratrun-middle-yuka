@@ -1,0 +1,28 @@
+@import "../../../mixin";
+
+.award {
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+    
+    @include mobile {
+        width: 100%;
+    }
+    
+    tr, td {
+        padding: 20px;
+        border-bottom: 2px solid lightgray;
+        
+        @include mobile {
+            padding: 5px;
+            display: block;
+            border: 0;
+        }
+    }
+
+    tr {
+        @include mobile {
+            border-bottom: 2px solid lightgray;
+        }
+    }
+}

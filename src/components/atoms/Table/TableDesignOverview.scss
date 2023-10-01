@@ -1,0 +1,43 @@
+@import "../../../mixin";
+
+.overview {
+    border-collapse: collapse;
+
+    th, td {
+        border: 2px solid gray;
+        padding: 10px;
+        border-collapse: collapse;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    th {
+        background-color: darkgray;
+        color: white;
+        text-align: center;
+
+        @include mobile {
+            display: none;
+        }
+    }
+    
+    img {
+        width: 100%;
+    }
+
+    .sub {
+        width: 25%;
+
+        @include mobile {
+            width: auto;
+            background-color: darkgray;
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+
+
